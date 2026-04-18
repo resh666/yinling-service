@@ -1,0 +1,116 @@
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>银龄生活管家</h4>
+                <p>社区银龄生活管家服务项目</p>
+                <p>专注为老年人提供专业、便捷、贴心的上门养老服务</p>
+            </div>
+            <div class="footer-section">
+                <h4>服务项目</h4>
+                <ul>
+                    <li><a href="services.html">代买代办服务</a></li>
+                    <li><a href="services.html">智能手机教学</a></li>
+                    <li><a href="services.html">陪同就医服务</a></li>
+                    <li><a href="services.html">上门理发护理</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>联系方式</h4>
+                <p>电话：177-1735-0629</p>
+                <p>地址：上海市第二轻工业学校</p>
+                <p>洋泾街道社区</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 社区银龄生活管家服务项目 | 上海市第二轻工业学校</p>
+        </div>
+    </div>
+</footer>
+
+<div class="floating-buttons">
+    <a href="tel:17717350629" class="floating-btn phone-btn" title="拨打电话">&#128222;</a>
+    <a href="#" class="floating-btn top-btn" title="回到顶部">&#8593;</a>
+</div>
+
+<div id="paymentModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h3>选择支付方式</h3>
+            <span class="close" onclick="closePaymentModal()">&times;</span>
+        </div>
+        <div class="modal-body">
+            <div class="service-summary" id="modalServiceSummary"></div>
+            <div class="payment-amount" id="modalAmount"></div>
+            <div class="payment-methods">
+                <button class="payment-btn wechat" onclick="selectPayment('wechat')">
+                    <div class="payment-icon">&#xe677;</div>
+                    <span>微信支付</span>
+                </button>
+                <button class="payment-btn alipay" onclick="selectPayment('alipay')">
+                    <div class="payment-icon">&#xe679;</div>
+                    <span>支付宝</span>
+                </button>
+            </div>
+            <div class="payment-qrcode" id="paymentQRCode" style="display: none;">
+                <div class="qrcode-placeholder" id="qrcodePlaceholder"></div>
+                <p id="paymentInstructions"></p>
+            </div>
+            <div class="payment-actions" id="paymentActions" style="display: none;">
+                <button class="btn btn-primary" onclick="confirmPayment()">确认支付</button>
+                <button class="btn btn-secondary" onclick="closePaymentModal()">取消</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="bookingModal" class="modal">
+    <div class="modal-content modal-form">
+        <div class="modal-header">
+            <h3 id="bookingModalTitle">预约服务</h3>
+            <span class="close" onclick="closeBookingModal()">&times;</span>
+        </div>
+        <div class="modal-body">
+            <form id="modalBookingForm">
+                <input type="hidden" id="modalServiceType" name="serviceType">
+                <input type="hidden" id="modalServicePrice" name="price">
+                <div class="form-group">
+                    <label>服务项目</label>
+                    <input type="text" id="modalServiceName" readonly>
+                </div>
+                <div class="form-group">
+                    <label>服务费用</label>
+                    <input type="text" id="modalServicePriceDisplay" readonly>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="modalName"><span style="color: #e67e22;">*</span> 姓名</label>
+                        <input type="text" id="modalName" name="name" required placeholder="请输入您的姓名">
+                    </div>
+                    <div class="form-group">
+                        <label for="modalPhone"><span style="color: #e67e22;">*</span> 联系电话</label>
+                        <input type="tel" id="modalPhone" name="phone" required placeholder="请输入联系电话">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="modalAddress">服务地址</label>
+                    <input type="text" id="modalAddress" name="address" placeholder="请输入详细地址">
+                </div>
+                <div class="form-group">
+                    <label for="modalAppointmentTime">预约时间</label>
+                    <input type="datetime-local" id="modalAppointmentTime" name="appointmentTime">
+                </div>
+                <div class="form-group">
+                    <label for="modalNotes">备注说明</label>
+                    <textarea id="modalNotes" name="notes" rows="2" placeholder="请输入其他需求或说明"></textarea>
+                </div>
+                <button type="button" class="btn btn-primary" style="width: 100%;" onclick="proceedToPayment()">
+                    去支付
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+<script src="js/main.js"></script>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>预约服务 - 社区银龄生活管家</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/config.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <a href="index.html" class="logo" style="text-decoration: none; color: white;">
+                <div class="logo-icon">&#128116;</div>
+                <div>
+                    <h1>银龄生活管家</h1>
+                    <p>社区居家养老服务专家</p>
+                </div>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="about.html">关于我们</a></li>
+                    <li><a href="services.html">服务项目</a></li>
+                    <li><a href="pricing.html">服务价格</a></li>
+                    <li><a href="booking.html" class="active">预约服务</a></li>
+                    <li><a href="contact.html">联系我们</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h2>预约服务</h2>
+            <p>填写以下信息，我们会尽快与您联系确认</p>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="booking-form-section animate-on-scroll">
+                <form id="bookingForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name"><span style="color: #e67e22;">*</span> 姓名</label>
+                            <input type="text" id="name" name="name" required placeholder="请输入您的姓名">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone"><span style="color: #e67e22;">*</span> 联系电话</label>
+                            <input type="tel" id="phone" name="phone" required placeholder="请输入联系电话">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="address">服务地址</label>
+                        <input type="text" id="address" name="address" placeholder="请输入详细地址">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="serviceType"><span style="color: #e67e22;">*</span> 服务类型</label>
+                            <select id="serviceType" name="serviceType" required>
+                                <option value="">请选择服务类型</option>
+                                <optgroup label="基础便民类">
+                                    <option value="代买代办">代买药品/买菜/生活跑腿代办 - ¥20/单</option>
+                                    <option value="智能教学">智能手机教学、日常陪伴 - ¥30/次</option>
+                                    <option value="陪同就医">陪同就医、代取体检报告 - ¥60/次</option>
+                                    <option value="紧急协助">老年人紧急上门协助 - ¥15/单</option>
+                                </optgroup>
+                                <optgroup label="专业护理类">
+                                    <option value="上门理发">上门理发 - ¥40/单</option>
+                                    <option value="个人护理">基础个人护理 - ¥45/单</option>
+                                    <option value="足部助浴">足部护理、简易助浴 - ¥55/单</option>
+                                </optgroup>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="appointmentTime">预约时间</label>
+                            <input type="datetime-local" id="appointmentTime" name="appointmentTime">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="notes">备注说明</label>
+                        <textarea id="notes" name="notes" rows="3" placeholder="请输入其他需求或说明"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%; padding: 15px; font-size: 1.1rem;">
+                        提交预约
+                    </button>
+                </form>
+                <div id="formMessage" class="form-message" style="display: none;"></div>
+            </div>
+
+            <div style="text-align: center; margin-top: 40px;">
+                <p style="color: var(--text-light); margin-bottom: 20px;">或选择直接扫码预约</p>
+                <div id="qrcode" style="display: inline-block; background: white; padding: 20px; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.1);"></div>
+                <p style="margin-top: 15px; font-size: 0.9rem; color: var(--text-light);">扫描二维码用手机预约</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>银龄生活管家</h4>
+                    <p>社区银龄生活管家服务项目</p>
+                    <p>专注为老年人提供专业、便捷、贴心的上门养老服务</p>
+                </div>
+                <div class="footer-section">
+                    <h4>服务项目</h4>
+                    <ul>
+                        <li><a href="services.html">代买代办服务</a></li>
+                        <li><a href="services.html">智能手机教学</a></li>
+                        <li><a href="services.html">陪同就医服务</a></li>
+                        <li><a href="services.html">上门理发护理</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>联系方式</h4>
+                    <p>电话：177-1735-0629</p>
+                    <p>地址：上海市第二轻工业学校</p>
+                    <p>洋泾街道社区</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 社区银龄生活管家服务项目 | 上海市第二轻工业学校</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="floating-buttons">
+        <a href="tel:17717350629" class="floating-btn phone-btn" title="拨打电话">&#128222;</a>
+        <a href="#" class="floating-btn top-btn" title="回到顶部">&#8593;</a>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
