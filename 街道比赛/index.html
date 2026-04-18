@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>社区银龄生活管家服务项目</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/config.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <a href="index.html" class="logo" style="text-decoration: none; color: white;">
+                <div class="logo-icon">&#128116;</div>
+                <div>
+                    <h1>银龄生活管家</h1>
+                    <p>社区居家养老服务专家</p>
+                </div>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active">首页</a></li>
+                    <li><a href="about.html">关于我们</a></li>
+                    <li><a href="services.html">服务项目</a></li>
+                    <li><a href="pricing.html">服务价格</a></li>
+                    <li><a href="booking.html">预约服务</a></li>
+                    <li><a href="contact.html">联系我们</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h2>社区银龄生活管家服务项目</h2>
+            <p>为洋泾街道老年人提供专业、便捷、贴心的上门养老服务<br>让子女放心，让老人安心</p>
+            <div class="hero-buttons">
+                <a href="booking.html" class="btn btn-primary">立即预约服务</a>
+                <a href="services.html" class="btn btn-secondary">了解服务内容</a>
+            </div>
+            <div class="stats">
+                <div class="stat-item animate-on-scroll">
+                    <div class="stat-number">32.5%</div>
+                    <div class="stat-label">辖区老年人口占比</div>
+                </div>
+                <div class="stat-item animate-on-scroll">
+                    <div class="stat-number">12万+</div>
+                    <div class="stat-label">辖区户籍人口</div>
+                </div>
+                <div class="stat-item animate-on-scroll">
+                    <div class="stat-number">7项</div>
+                    <div class="stat-label">核心服务项目</div>
+                </div>
+                <div class="stat-item animate-on-scroll">
+                    <div class="stat-number">双渠道</div>
+                    <div class="stat-label">预约方式</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services-preview">
+        <div class="container">
+            <div class="section-title">
+                <h2>热门服务</h2>
+                <p>基础便民类与专业护理类，全方位满足老年人居家养老需求</p>
+            </div>
+            <div class="service-cards">
+                <div class="service-card animate-on-scroll">
+                    <div class="service-icon">&#128722;</div>
+                    <h3>代买药品/买菜/生活跑腿代办</h3>
+                    <div class="price">&#65509;20<span>/单</span></div>
+                    <ul>
+                        <li>&#9203; 服务时长：20-40分钟/单</li>
+                        <li>&#128101; 志愿者上门服务</li>
+                        <li>&#128222; 线上/电话预约</li>
+                    </ul>
+                    <button class="btn btn-primary" style="width: 100%;" onclick="openBookingModal('代买代办', '代买药品/买菜/生活跑腿代办', 20)">立即预约</button>
+                </div>
+                <div class="service-card animate-on-scroll">
+                    <div class="service-icon">&#128241;</div>
+                    <h3>智能手机教学、日常陪伴</h3>
+                    <div class="price">&#65509;30<span>/次</span></div>
+                    <ul>
+                        <li>&#9203; 服务时长：45-60分钟/次</li>
+                        <li>&#128101; 志愿者上门服务</li>
+                        <li>&#128522; 贴心暖心陪伴</li>
+                    </ul>
+                    <button class="btn btn-primary" style="width: 100%;" onclick="openBookingModal('智能教学', '智能手机教学、日常陪伴', 30)">立即预约</button>
+                </div>
+                <div class="service-card animate-on-scroll">
+                    <div class="service-icon">&#128657;</div>
+                    <h3>陪同就医、代取体检报告</h3>
+                    <div class="price">&#65509;60<span>/次</span></div>
+                    <ul>
+                        <li>&#9203; 服务时长：1.5-2小时/次</li>
+                        <li>&#128101; 志愿者陪同服务</li>
+                        <li>&#128137; 专业陪诊协助</li>
+                    </ul>
+                    <button class="btn btn-primary" style="width: 100%;" onclick="openBookingModal('陪同就医', '陪同就医、代取体检报告', 60)">立即预约</button>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="services.html" class="btn btn-secondary">查看全部服务</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="qrcode-section" style="background: rgba(230, 126, 34, 0.05);">
+        <div class="container">
+            <div class="section-title">
+                <h2>扫码预约</h2>
+                <p>微信扫描二维码，快速预约服务</p>
+            </div>
+            <div style="text-align: center;">
+                <div id="qrcode" style="display: inline-block; background: white; padding: 20px; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.1);"></div>
+                <p style="margin-top: 20px; font-size: 1.1rem; color: var(--text-dark);">扫描二维码访问手机端页面</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>银龄生活管家</h4>
+                    <p>社区银龄生活管家服务项目</p>
+                    <p>专注为老年人提供专业、便捷、贴心的上门养老服务</p>
+                </div>
+                <div class="footer-section">
+                    <h4>服务项目</h4>
+                    <ul>
+                        <li><a href="services.html">代买代办服务</a></li>
+                        <li><a href="services.html">智能手机教学</a></li>
+                        <li><a href="services.html">陪同就医服务</a></li>
+                        <li><a href="services.html">上门理发护理</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>联系方式</h4>
+                    <p>电话：177-1735-0629</p>
+                    <p>地址：上海市第二轻工业学校</p>
+                    <p>洋泾街道社区</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 社区银龄生活管家服务项目 | 上海市第二轻工业学校</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="floating-buttons">
+        <a href="tel:17717350629" class="floating-btn phone-btn" title="拨打电话">&#128222;</a>
+        <a href="#" class="floating-btn top-btn" title="回到顶部">&#8593;</a>
+    </div>
+
+    <div id="paymentModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>选择支付方式</h3>
+                <span class="close" onclick="closePaymentModal()">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="service-summary" id="modalServiceSummary"></div>
+                <div class="payment-amount" id="modalAmount"></div>
+                <div class="payment-methods">
+                    <button class="payment-btn wechat" onclick="selectPayment('wechat')">
+                        <div class="payment-icon">&#xe677;</div>
+                        <span>微信支付</span>
+                    </button>
+                    <button class="payment-btn alipay" onclick="selectPayment('alipay')">
+                        <div class="payment-icon">&#xe679;</div>
+                        <span>支付宝</span>
+                    </button>
+                </div>
+                <div class="payment-qrcode" id="paymentQRCode" style="display: none;">
+                    <div class="qrcode-placeholder" id="qrcodePlaceholder"></div>
+                    <p id="paymentInstructions"></p>
+                </div>
+                <div class="payment-actions" id="paymentActions" style="display: none;">
+                    <button class="btn btn-primary" onclick="confirmPayment()">确认支付</button>
+                    <button class="btn btn-secondary" onclick="closePaymentModal()">取消</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="bookingModal" class="modal">
+        <div class="modal-content modal-form">
+            <div class="modal-header">
+                <h3 id="bookingModalTitle">预约服务</h3>
+                <span class="close" onclick="closeBookingModal()">&times;</span>
+            </div>
+            <div class="modal-body">
+                <form id="modalBookingForm">
+                    <input type="hidden" id="modalServiceType" name="serviceType">
+                    <input type="hidden" id="modalServicePrice" name="price">
+                    <div class="form-group">
+                        <label>服务项目</label>
+                        <input type="text" id="modalServiceName" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label>服务费用</label>
+                        <input type="text" id="modalServicePriceDisplay" readonly>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="modalName"><span style="color: #e67e22;">*</span> 姓名</label>
+                            <input type="text" id="modalName" name="name" required placeholder="请输入您的姓名">
+                        </div>
+                        <div class="form-group">
+                            <label for="modalPhone"><span style="color: #e67e22;">*</span> 联系电话</label>
+                            <input type="tel" id="modalPhone" name="phone" required placeholder="请输入联系电话">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="modalAddress">服务地址</label>
+                        <input type="text" id="modalAddress" name="address" placeholder="请输入详细地址">
+                    </div>
+                    <div class="form-group">
+                        <label for="modalAppointmentTime">预约时间</label>
+                        <input type="datetime-local" id="modalAppointmentTime" name="appointmentTime">
+                    </div>
+                    <div class="form-group">
+                        <label for="modalNotes">备注说明</label>
+                        <textarea id="modalNotes" name="notes" rows="2" placeholder="请输入其他需求或说明"></textarea>
+                    </div>
+                    <button type="button" class="btn btn-primary" style="width: 100%;" onclick="proceedToPayment()">
+                        去支付
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
